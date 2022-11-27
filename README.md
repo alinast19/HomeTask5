@@ -1,24 +1,11 @@
-# HomeTask 4
+# HomeTask 5
 
 ### Run and test instruction:
 
 1. clone the repository;
 2. run `vagrant up`;
-3. run `vagrant ssh hw4`;
-4. check if softlink created - `ls -l etcMtabLink`;
-5. auth as adminuser and check current dir:
-    - su - adminuser;
-    - password - `password`;
-    - id.
-6. auth as poweruser and check current dir:
-    - su - poweruser;
-    - id.
-7. run `sudo iptables -L -v` for checking access to iptables;
-8. check if poweruser has access to `/home` directory of adminuser:
-    - `cd /home/adminuser`.
-
-How to generate password:
-- `echo 'password' | openssl passwd -1 -stdin`
-
-How to use:
-- `echo 'userName:pashGeneratedPassword' | sudo chpasswd -e`
+3. run `vagrant ssh hw5`;
+4. go to folder1 `cd folder1`;
+5. create any file. for ex. - `touch anyName.txt`;
+6. `cd ~`;
+7. check content in folter2 - `ls folder2`.
