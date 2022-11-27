@@ -1,10 +1,10 @@
 [Unit]
-Description=Folder Sync Service
+Description=Files Mover
 After=network.target
 
 [Service]
 User=root
-ExecStart=/vagrant/folder-sync.sh
+ExecStart=/vagrant/files-mover.sh
 RestartSec=5s
 Restart=on-failure
 User=vagrant

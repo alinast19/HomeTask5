@@ -1,6 +1,7 @@
-mkdir /folder1
-mkdir /folder2
-cp /vagrant/folder-sync.service /lib/systemd/system/
+mkdir /var/folder{1,2}
+
+cat /vagrant/files-mover.service /lib/systemd/system/files-mover.service
+
 systemctl daemon-reload
-systemctl start folder-sync
-systemctl enable folder-sync
+systemctl start files-mover
+systemctl enable files-mover
