@@ -1,13 +1,11 @@
 [Unit]
 Description=Files Mover
-After=network.target
 
 [Service]
 User=root
-ExecStart=/vagrant/files-mover.sh
-RestartSec=5s
-Restart=on-failure
-User=vagrant
+WorkingDirectory=/
+ExecStart=/bin/bash -c 'while true; do mv -fv folder1/* folder2 2>/dev/null; sleep 3; done'
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
